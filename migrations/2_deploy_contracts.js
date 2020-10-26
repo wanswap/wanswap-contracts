@@ -3,8 +3,13 @@ const WwanToken = artifacts.require('WwanToken');
 const UniswapV2Factory = artifacts.require('UniswapV2Factory');
 const UniswapV2Router01 = artifacts.require('UniswapV2Router01');
 const UniswapV2Router02 = artifacts.require('UniswapV2Router02');
+const Multicall = artifacts.require('Multicall');
 
 module.exports = async (deployer, network, accounts) => {
+
+  // await deployer.deploy(Multicall);
+  // return;
+
   console.log(`...network = ${network}`)
   global.network = network;
   const [owner, admin, other] = accounts;
